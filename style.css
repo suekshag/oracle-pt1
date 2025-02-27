@@ -1,0 +1,34 @@
+/* Basic styles for layout */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: bisque;
+  background: url("https://i.pinimg.com/736x/63/87/74/6387743d256efa85de044e78a9fd8cfe.jpg") center center/cover;
+}
+
+#image {
+  display: none; /* Hide image by default */
+  margin-top: 20px;
+  width: 800px;
+  display: grid;
+  align-content: center;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(9, 73, 9);
+  font-size: 15px;
+}
+
+
+.head{
+  border: 1px solid rgb(101, 86, 68);
+  color: rgb(18, 41, 18);
+  font-size: 50px;
+  padding: 10px;
+  background-color: beige;
+
+}
