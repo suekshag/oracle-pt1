@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyword Image Finder</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  
 </head>
 <body>
    <span class="head">MATCH ANIMALS WITH THE QUALITY</span>
-  <p>Match each quality with the animal that best represents it. Then, craft a sentence using that quality as a clue to reveal the answer.  </p>
+  <div class="box1">
+    <p>Match each quality with the animal that best represents it. Then, craft a sentence using that quality as a clue to reveal the answer.</p>
+
+  </div>
 
    <div class="list">
   <li class="list1">
@@ -48,16 +54,45 @@
   </div>
   
 
+     <div class="sentence"><input type="text" id="sentence" placeholder="Enter a sentence"></div>
 
-    <!-- Input field for user to type a sentence -->
-    <div><input type="text" id="sentence" placeholder="Enter a sentence">
+      <!-- Button to check for keywords -->
+  <button class="button" onclick="checkSentence()">Check</button>
+
+  <div class="box">
+    <p>Adjust the size of the image using the cursor below and play with filters to see animals in your favourite</p>
+
+      </div>
+
+   <div class="adjust">
+ <div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+
+<select class="list" id="filterSelect">
+      <option value="none">None</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert</option>
+      <option value="sepia">Sepia</option>
+    </select>
+
+     <!-- Image that will be shown based on the keyword -->
+    <img id="image" src="" alt="Keyword Image">
+
+    </div>
+  
+
+   
     
-    <!-- Button to check for keywords -->
-  <button onclick="checkSentence()">Check</button></div>
 
     <!-- Image that will be shown based on the keyword -->
     <img id="image" src="" alt="Keyword Image">
 
+    
+
+    <script src="script.js"></script>
+
+    
 
 
 </body>

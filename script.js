@@ -14,7 +14,7 @@ var images = {
   agile:
     "https://images2.minutemediacdn.com/image/upload/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/shape/cover/sport/iStock-177369626-1-0e8d40eaabe65d2cb2d745ef45f09229.jpg",
   ruler:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQum62NWJbpa3uqr6ozh7yZxE_sM2prsZCsVg&s",
+    "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg",
   smellers:
     "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ours_brun_parcanimalierpyrenees_1.jpg",
   howlers: "https://cdn.britannica.com/07/5207-050-5BC9F251/Gray-wolf.jpg",
@@ -172,3 +172,53 @@ function checkSentence() {
              window.alert("please input a sentece containing keywords");
            }
 }
+
+// function adjustImagesize() {
+//   var image = document.getElementById("result");
+//   var slider = document.getElementById("myRange");
+//   var size = slider.value * 5;
+//   console.log("slider value:", slider.value);
+//   image.style.width = size + "px";
+//   image.style.height = "auto";
+//   image.style.border = "1px solid balck";
+// }
+
+// function imageSizeChange(){
+//   console.log("slider has moved!");
+// }
+
+function imageSizeChange() {
+  console.log("slider has moved!");
+}
+document.getElementById("myRange").addEventListener("input", imageSizeChange);
+
+function imageSizeChange() {
+  var slider = document.getElementById("myRange").value;
+  console.log("slider value", slider);
+  var image = document.getElementById("image");
+  console.log("image", image);
+  image.style.width = slider * 10 + "px";
+  image.style.boxShadow = "10px 5px 5px black";
+}
+
+document.getElementById("myRange").addEventListener("input", imageSizeChange);
+
+
+function applyImageFilter() {
+  var image = document.getElementById("image");
+  var filterSelect = document.getElementById("filterSelect");
+  var filterValue = filterSelect.value;
+
+  if (filterValue === "grayscale") {
+    image.style.filter = "grayscale(100%)";
+  } else if (filterValue === "invert") {
+    image.style.filter = "invert(100%)";
+  } else if (filterValue === "sepia") {
+    image.style.filter = "sepia(100%)";
+  } else {
+    image.style.filter = "none";
+  }
+}
+
+document
+  .getElementById("filterSelect").addEventListener("change", applyImageFilter);
