@@ -12,8 +12,11 @@
 </head>
 <body>
    <span class="head">MATCH ANIMALS WITH THE QUALITY</span>
+  <div class="container">
+    <div class="part1">
+  
   <div class="box1">
-    <p>Match each quality with the animal that best represents it. Then, craft a sentence using that quality as a clue to reveal the answer.</p>
+    <span>Match each quality with the animal that best represents it. Then, craft a sentence using that quality as a clue to reveal the answer.</span>
 
   </div>
 
@@ -55,6 +58,7 @@
   
 
      <div class="sentence"><input type="text" id="sentence" placeholder="Enter a sentence"></div>
+     <p class = "error" id="errorMsg" style="visibility: hidden;"> please input a sentence containing the keyword</p>
 
       <!-- Button to check for keywords -->
   <button class="button" onclick="checkSentence()">Check</button>
@@ -77,16 +81,26 @@
     </select>
 
      <!-- Image that will be shown based on the keyword -->
-    <img id="image" src="" alt="Keyword Image">
+    
 
     </div>
-  
+    </div>
 
-   
-    
+    <audio id="animalSound" controls style="display:none;"></audio>
+
+    <img id="image" style="display:none; max-width:700px;" />
+<audio id="animalSound" controls style="display:none;"></audio>
+<p class="displayText" id="displayText"></p>
+<p id="errorMsg" style="visibility:hidden; color:red;">No matching image found.</p>
+
+    <div class="part2">
 
     <!-- Image that will be shown based on the keyword -->
     <img id="image" src="" alt="Keyword Image">
+</div>
+</div>
+
+
 
     
 

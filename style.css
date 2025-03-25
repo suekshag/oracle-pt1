@@ -16,7 +16,7 @@ body {
 #image {
   display: none; /* Hide image by default */
   margin-top: 20px;
-  /* width: 800px; */
+  max-width: 60em;
 }
 
 .list{
@@ -28,10 +28,9 @@ body {
   border-radius: 15px;
   color: bisque;
   font-size: 15px;
+  margin-bottom: 0.5em;
   
 }
-
-
 
 .head{
   border: 1px solid rgb(101, 86, 68);
@@ -59,21 +58,21 @@ body {
   border: 2px solid burlywood;
   background-color: burlywood;
   border-radius: 15px;
-  margin-left: 37.5em;
+  margin-left: 16em;
   margin-top: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 2em;
 }
 
 .box1{
   height: 2em;
-  width: 70em;
+  width: 50em;
   border: 1px solid burlywood;
   background-color: burlywood;
   border-radius: 5px;
   margin-top: 1em;
-  padding-bottom: 1em;
- margin-left: 12em;
- margin-bottom: 1em;
+  padding-bottom: 0.5em;
+ /* margin-left: 12em; */
+ margin-bottom: 0.2em;
 }
 .sentence input{
   height: 3em;
@@ -123,3 +122,35 @@ font-size: 1em;
 padding-left: 2em ;
 }
 
+.container{
+  display: grid;
+  grid-template-columns: 50em 10em;
+
+}
+
+.part2{
+  display: grid;
+  place-content: right;
+  margin-top: 20em;
+}
+
+.error{
+  color: rgb(195, 78, 78);
+  background-color:rgb(46, 40, 11);
+  height: 1.5em;
+  padding: 0.2em;
+  margin-bottom: 1em;
+
+}
+
+.displayText{
+  font-size: 30px;
+  text-transform: uppercase;
+  color:rgb(46, 40, 11) ;
+  margin-left: 32em;
+ height: 500px;
+ width: 500px;
+ margin-top: -10em;
+
+
+}
